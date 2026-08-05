@@ -30,7 +30,7 @@ func TestGetAPIKey(t *testing.T) {
 		{
 			name:      "header with API key",
 			header:    headerWithAPIKey,
-			expected:  "the-key",
+			expected:  "the-api-key",
 			expectErr: false,
 			errMsg:    nil,
 		},

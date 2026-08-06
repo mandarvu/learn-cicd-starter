@@ -98,6 +98,6 @@ func main() {
 }
 
 func unused() {
-    // some 
-    // lines
+	// some
+	// lines
 }

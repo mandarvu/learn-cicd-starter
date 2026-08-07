@@ -27,6 +27,9 @@ jobs:
       - name: Build prod code for notely
         run: ./scripts/buildprod.sh
 
+      - name: Run migration
+        run: ./scripts/migrateup.sh
+
       - id: auth
         uses: google-github-actions/auth@v2
         with:

@@ -4,6 +4,9 @@ on:
   push:
     branches: ["main"]
 
+  env:
+    DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
 jobs:
   deploy:
     name: Deploy
@@ -20,9 +23,6 @@ jobs:
 
       - name: install goose
         run: go install github.com/pressly/goose/v3/cmd/goose@latest
-
-      - env:
-        DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: Build prod code for notely
         run: ./scripts/buildprod.sh

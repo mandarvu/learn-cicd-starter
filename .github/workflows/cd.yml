@@ -5,8 +5,7 @@ on:
     branches: ["main"]
 
   env:
-    with:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    DATABASE_URL: "${{ secrets.DATABASE_URL }}"
 
 jobs:
   deploy:
